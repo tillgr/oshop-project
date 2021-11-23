@@ -1,0 +1,19 @@
+
+.card {
+  height: 100%;
+}
+
+
+.card-footer {
+  padding: 0;
+  background: #fff;
+}
+
+.card-footer button {
+  cursor: pointer;
+  background-color: #6c757d;
+}
+
+.card-footer button:hover{
+  background-color: #5a6268;
+}

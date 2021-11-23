@@ -1,0 +1,111 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center mr-2"
+       routerLink="/">
+      <svg width="2rem"
+           height="2rem"
+           id="Ebene_1"
+           data-name="Ebene 1"
+           xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 79.96 79.96">
+        <defs>
+          <linearGradient
+            id="Unbenannter_Verlauf_6"
+            x1="11.71"
+            y1="11.71"
+            x2="68.25"
+            y2="68.25"
+            gradientUnits="userSpaceOnUse">
+            <stop
+              offset="0"
+              stop-color="#fac812"></stop>
+            <stop
+              offset="1"
+              stop-color="#f1a60b"></stop>
+          </linearGradient>
+        </defs>
+        <circle
+          cx="39.98"
+          cy="39.98"
+          r="39.98"
+          fill="url(#Unbenannter_Verlauf_6)"></circle>
+        <path
+          d="M18.06,43.85c0,14.67,9.76,21.8,21.8,21.8V9.57S18.06,26.21,18.06,43.85Z"
+          fill="#49b37e"></path>
+        <path
+          d="M61.66,43.85c0,14.67-9.76,21.8-21.8,21.8V9.57S61.66,26.21,61.66,43.85Z"
+          fill="#25a366"></path>
+      </svg>
+      <span class="ml-4">O!-Shop</span>
+    </a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse"
+         id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link cart-items"
+             routerLink="/shopping-cart">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              class="bi bi-cart-fill mr-1">
+              <path
+                fill-rule="evenodd"
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+            </svg>
+            <span class="badge badge-warning badge-pill"
+                  *ngIf="cart$ | async as cart">
+              {{ cart.totalItemsCount }}
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <ng-template #anonymousUser>
+          <li class="nav-item">
+            <a class="nav-link"
+               routerLink="/login">Login</a>
+          </li>
+        </ng-template>
+        <li ngbDropdown
+            *ngIf="appUser; else anonymousUser"
+            class="nav-item dropdown">
+          <a ngbDropdownToggle
+             class="nav-link dropdown-toggle"
+             id="dropdown01"
+             data-toggle="dropdown"
+             aria-haspopup="true"
+             aria-expanded="false">
+            {{ appUser.name }}
+          </a>
+          <div ngbDropdownMenu
+               class="dropdown-menu"
+               aria-labelledby="dropdown01">
+            <a class="dropdown-item"
+               routerLink="/my/orders">My Orders</a>
+            <ng-container *ngIf="appUser.isAdmin">
+              <a class="dropdown-item"
+                 routerLink="/admin/orders">Manage Orders</a>
+              <a class="dropdown-item"
+                 routerLink="/admin/products">Manage Products</a>
+            </ng-container>
+            <a class="dropdown-item"
+               (click)="logout()">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
