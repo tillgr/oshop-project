@@ -1,27 +1,27 @@
-# Organic Shop
+# OshopProject
 
-This project demonstrates a simple e-commerce application for an imaginary organic shop. It is built with Angular, Firebase and Bootstrap 4 as the final project in my complete Angular course: 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-http://programmingwithmosh.com/courses/complete-angular-master-class/
+## Development server
 
-In this course, you'll see how I've built this application, step-by-step.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-By the end of watching course, you'll be able to:
+## Code scaffolding
 
-- Use Angular and Firebase to build real-time serverless applications
-- Think like a software engineer 
-- Write clean and testable code 
-- Refactor bad code into good code 
-- Design classes and modules with proper boundaries 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-## Important 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Before running this application on your machine, create a Firebase project. You need to replace the Firebase settings I've defined in /src/environments with the settings of your own Firebase project.
+## Running unit tests
 
-## Running the Application
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
+## Further help
 
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
