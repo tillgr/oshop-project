@@ -1,5 +1,26 @@
 # OshopProject
 
+The result of this course project is the frontend for an organic groceries online shop.
+
+## Topics covered
+
+- Displaying data and handling events
+- Building re-usable components
+- Manipulating the DOM using directives
+- Formatting data using pipes
+- Building template-driven and reactive forms
+- Consuming HTTP services
+- Using Reactive Extensions and observables
+- Implementing routing and navigation
+- Implementing authentication and authorization
+- Storing data in Firebase
+- Deploying the application
+- Unit testing Angular apps
+- Basics of the Redux architecture
+- Using Angular animations
+- Writing clean, maintainable code
+- Shortcuts to write more code in less time
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
 
 ## Development server
