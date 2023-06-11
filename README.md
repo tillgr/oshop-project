@@ -1,4 +1,4 @@
-# OshopProject
+# Oshop-Project
 
 The result of this course project is the frontend for an organic groceries online shop.
 
